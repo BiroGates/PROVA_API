@@ -2,7 +2,9 @@ import { con } from './connection.js';
 
 export async function listarAnimes() {
     const command = `
-        SELECT * FROM tb_anime
+        SELECT id_anime     id,
+                nm_anime    nome
+        FROM tb_anime
     `;
 
     const [resposta] = await con.query(command);
